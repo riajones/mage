@@ -56,4 +56,33 @@ public class ThrummingStoneTest extends CardTestPlayerBase {
     assertPermanentCount(playerA, "Shadowborn Apostle", 3);
 
   }
+
+    @Test
+  public void testApplyMultipleRippleCardsWhenMultiRipple() throws Exception {
+
+    removeAllCardsFromLibrary(playerA);
+
+    addCard(Zone.BATTLEFIELD, playerA, "Thrumming Stone");
+    addCard(Zone.BATTLEFIELD, playerA, "Swamp");
+    addCard(Zone.HAND, playerA, "Shadowborn Apostle");
+
+    addCard(Zone.LIBRARY, playerA, "Shadowborn Apostle");
+    addCard(Zone.LIBRARY, playerA, "Shadowborn Apostle");
+    addCard(Zone.LIBRARY, playerA, "Swamp", 2);
+    addCard(Zone.LIBRARY, playerA, "Shadowborn Apostle");
+    addCard(Zone.LIBRARY, playerA, "Swamp", 3);
+    addCard(Zone.LIBRARY, playerA, "Shadowborn Apostle");
+    addCard(Zone.LIBRARY, playerA, "Swamp", 3);
+
+    skipInitShuffling();
+
+    castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, "Shadowborn Apostle");
+    setChoice(playerA, true);
+
+    setStopAt(2, PhaseStep.POSTCOMBAT_MAIN);
+    execute();
+
+    assertPermanentCount(playerA, "Shadowborn Apostle", 5);
+
+  }
 }

@@ -84,6 +84,7 @@ public final class Eventide extends ExpansionSet {
         cards.add(new SetCardInfo("Flooded Grove", 177, Rarity.RARE, mage.cards.f.FloodedGrove.class));
         cards.add(new SetCardInfo("Gift of the Deity", 122, Rarity.COMMON, mage.cards.g.GiftOfTheDeity.class));
         cards.add(new SetCardInfo("Gilder Bairn", 152, Rarity.UNCOMMON, mage.cards.g.GilderBairn.class));
+        cards.add(new SetCardInfo("Glamerdye", 21, Rarity.RARE, mage.cards.g.Glamerdye.class));
         cards.add(new SetCardInfo("Glen Elendra Archmage", 22, Rarity.RARE, mage.cards.g.GlenElendraArchmage.class));
         cards.add(new SetCardInfo("Grazing Kelpie", 153, Rarity.COMMON, mage.cards.g.GrazingKelpie.class));
         cards.add(new SetCardInfo("Groundling Pouncer", 154, Rarity.UNCOMMON, mage.cards.g.GroundlingPouncer.class));

@@ -212,7 +212,7 @@ public final class Mirage extends ExpansionSet {
         cards.add(new SetCardInfo("Memory Lapse", 74, Rarity.COMMON, mage.cards.m.MemoryLapse.class, RETRO_ART));
         cards.add(new SetCardInfo("Merfolk Raiders", 75, Rarity.COMMON, mage.cards.m.MerfolkRaiders.class, RETRO_ART));
         cards.add(new SetCardInfo("Merfolk Seer", 76, Rarity.COMMON, mage.cards.m.MerfolkSeer.class, RETRO_ART));
-//        cards.add(new SetCardInfo("Mind Bend", 77, Rarity.UNCOMMON, mage.cards.m.MindBend.class, RETRO_ART));
+        cards.add(new SetCardInfo("Mind Bend", 77, Rarity.UNCOMMON, mage.cards.m.MindBend.class, RETRO_ART));
         cards.add(new SetCardInfo("Mind Harness", 78, Rarity.UNCOMMON, mage.cards.m.MindHarness.class, RETRO_ART));
         cards.add(new SetCardInfo("Mindbender Spores", 229, Rarity.RARE, mage.cards.m.MindbenderSpores.class, RETRO_ART));
         cards.add(new SetCardInfo("Mire Shade", 131, Rarity.UNCOMMON, mage.cards.m.MireShade.class, RETRO_ART));

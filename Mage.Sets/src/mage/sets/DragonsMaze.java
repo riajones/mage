@@ -177,6 +177,7 @@ public final class DragonsMaze extends ExpansionSet {
         cards.add(new SetCardInfo("Thrashing Mossdog", 50, Rarity.COMMON, mage.cards.t.ThrashingMossdog.class));
         cards.add(new SetCardInfo("Tithe Drinker", 109, Rarity.COMMON, mage.cards.t.TitheDrinker.class));
         cards.add(new SetCardInfo("Toil // Trouble", 133, Rarity.UNCOMMON, mage.cards.t.ToilTrouble.class));
+        cards.add(new SetCardInfo("Trait Doctoring", 18, Rarity.RARE, mage.cards.t.TraitDoctoring.class));
         cards.add(new SetCardInfo("Trostani's Summoner", 110, Rarity.UNCOMMON, mage.cards.t.TrostanisSummoner.class));
         cards.add(new SetCardInfo("Turn // Burn", 134, Rarity.UNCOMMON, mage.cards.t.TurnBurn.class));
         cards.add(new SetCardInfo("Ubul Sar Gatekeepers", 30, Rarity.COMMON, mage.cards.u.UbulSarGatekeepers.class));
@@ -255,7 +256,7 @@ class DragonsMazeCollator implements BoosterCollator {
     private final CardRun uncommonA = new CardRun(true, "122", "75", "77", "76", "131", "83", "118", "106", "133", "103", "101", "110", "127", "70", "102", "118", "121", "60", "76", "111", "53", "83", "75", "127", "102", "110", "121", "77", "97", "122", "106", "76", "103", "102", "117", "133", "75", "53", "110", "131", "101", "60", "61", "117", "111", "121", "97", "83", "70", "118", "61", "122", "117", "106", "131", "103", "77", "101", "133", "60", "53", "97", "127", "61", "70", "111");
     private final CardRun uncommonB = new CardRun(true, "71", "129", "98", "74", "55", "105", "78", "130", "59", "56", "98", "135", "116", "129", "134", "78", "73", "74", "93", "130", "105", "79", "126", "59", "134", "55", "64", "56", "71", "73", "135", "79", "129", "93", "78", "116", "74", "126", "56", "79", "130", "55", "71", "98", "59", "135", "64", "93", "126", "105", "116", "73", "134", "64");
     // Trait Doctoring not implemented (text changing effect)
-    private final CardRun rare = new CardRun(false, "5", "7", "11", /*"18",*/ "22", "27", "34", "36", "47", "49", "51", "58", "66", "68", "69", "72", "80", "84", "85", "88", "89", "91", "96", "99", "104", "107", "108", "112", "115", "119", "123", "124", "125", "128", "132");
+    private final CardRun rare = new CardRun(false, "5", "7", "11", "18", "22", "27", "34", "36", "47", "49", "51", "58", "66", "68", "69", "72", "80", "84", "85", "88", "89", "91", "96", "99", "104", "107", "108", "112", "115", "119", "123", "124", "125", "128", "132");
     private final CardRun mythic = new CardRun(false, "57", "62", "63", "81", "82", "92", "94", "95", "100", "114");
     private final CardRun landCommon = new CardRun(false, "146", "147", "148", "149", "150", "151", "153", "154", "155", "156");
     private final CardRun landRare = new CardRun(false, "152", "RTR_238", "RTR_241", "RTR_243", "RTR_247", "RTR_248", "152",  "GTC_240", "GTC_242", "GTC_245", "GTC_247", "GTC_249");
