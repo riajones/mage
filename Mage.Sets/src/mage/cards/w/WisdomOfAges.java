@@ -7,6 +7,7 @@ import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.Duration;
+import mage.constants.TargetController;
 import mage.filter.StaticFilters;
 
 import java.util.UUID;
@@ -20,7 +21,8 @@ public final class WisdomOfAges extends CardImpl {
         super(ownerId, setInfo, new CardType[]{CardType.SORCERY}, "{4}{U}{U}{U}");
 
         // Return all instant and sorcery cards from your graveyard to your hand. You have no maximum hand size for the rest of the game.
-        this.getSpellAbility().addEffect(new ReturnToHandFromGraveyardAllEffect(StaticFilters.FILTER_CARD_INSTANT_OR_SORCERY));
+        this.getSpellAbility().addEffect(new ReturnToHandFromGraveyardAllEffect(
+                StaticFilters.FILTER_CARD_INSTANT_OR_SORCERY, TargetController.YOU));
         this.getSpellAbility().addEffect(new MaximumHandSizeControllerEffect(
                 Integer.MAX_VALUE, Duration.EndOfGame, MaximumHandSizeControllerEffect.HandSizeModification.SET
         ));

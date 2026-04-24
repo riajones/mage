@@ -34,7 +34,7 @@ public final class SphinxOfForgottenLore extends CardImpl {
         this.addAbility(FlyingAbility.getInstance());
 
         // Whenever this creature attacks, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to that card's mana cost.
-        Ability ability = new AttacksTriggeredAbility(new GainFlashbackTargetEffect());
+        Ability ability = new AttacksTriggeredAbility(new GainFlashbackTargetEffect().withTextOptions(true));
         ability.addTarget(new TargetCardInYourGraveyard(StaticFilters.FILTER_CARD_INSTANT_OR_SORCERY));
         this.addAbility(ability);
     }

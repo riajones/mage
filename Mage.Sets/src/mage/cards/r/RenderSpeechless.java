@@ -31,7 +31,7 @@ public final class RenderSpeechless extends CardImpl {
 
         // Put two +1/+1 counters on up to one target creature.
         Effect effect = new AddCountersTargetEffect(CounterType.P1P1.createInstance(2));
-        effect.setText("Put two +1/+1 counters on up to one target creature");
+        effect.setText("<br>Put two +1/+1 counters on up to one target creature");
         effect.setTargetPointer(new SecondTargetPointer());
         this.getSpellAbility().addEffect(effect);
         this.getSpellAbility().addTarget(new TargetCreaturePermanent(0, 1));

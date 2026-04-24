@@ -25,13 +25,13 @@ public final class DivergentEquation extends CardImpl {
 
         // Return up to X target instant and/or sorcery cards from your graveyard to your hand.
         this.getSpellAbility().addEffect(new ReturnFromGraveyardToHandTargetEffect()
-            .setText("Return X target instant and/or sorcery cards from your graveyard to your hand")
+            .setText("Return up to X target instant and/or sorcery cards from your graveyard to your hand")
         );
         this.getSpellAbility().addTarget(new TargetCardInYourGraveyard(0, 1, filter));
         this.getSpellAbility().setTargetAdjuster(new XTargetsCountAdjuster());
 
         // Exile Divergent Equation.
-        this.getSpellAbility().addEffect(new ExileSpellEffect());
+        this.getSpellAbility().addEffect(new ExileSpellEffect().concatBy("<br>"));
     }
 
     private DivergentEquation(final DivergentEquation card) {

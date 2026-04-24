@@ -58,7 +58,7 @@ class TempestraDameOfGamesEffect extends OneShotEffect {
 
     TempestraDameOfGamesEffect() {
         super(Outcome.Benefit);
-        staticText = "create a token that's a copy of target creature you control, except it isn't legendary. " +
+        staticText = "create a token that's a copy of another target creature you control, except it isn't legendary. " +
                 "It gains haste. Sacrifice it at the beginning of the next end step";
     }
 

@@ -36,7 +36,8 @@ public final class ElementalMascot extends CardImpl {
         // Opus -- Whenever you cast an instant or sorcery spell, this creature gets +1/+0 until end of turn. If five or more mana was spent to cast that spell, exile the top card of your library. You may play that card until the end of your next turn.
         this.addAbility(new OpusAbility(
                 new BoostSourceEffect(1, 0, Duration.EndOfTurn),
-                new ExileTopXMayPlayUntilEffect(1, Duration.UntilEndOfYourNextTurn), null, false
+                new ExileTopXMayPlayUntilEffect(1, Duration.UntilEndOfYourNextTurn)
+                        .withTextOptions("that card", true), null, false
         ));
     }
 

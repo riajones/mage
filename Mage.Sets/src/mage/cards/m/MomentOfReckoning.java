@@ -20,7 +20,7 @@ import mage.target.common.TargetNonlandPermanent;
  */
 public final class MomentOfReckoning extends CardImpl {
 
-    private static final FilterCard filter = new FilterNonlandCard("nonland permanent card");
+    private static final FilterCard filter = new FilterNonlandCard("nonland permanent card from your graveyard");
 
     static {
         filter.add(PermanentPredicate.instance);

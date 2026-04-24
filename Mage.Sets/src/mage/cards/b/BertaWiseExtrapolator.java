@@ -40,7 +40,7 @@ public final class BertaWiseExtrapolator extends CardImpl {
 
         // {X}, {T}: Create a 0/0 green and blue Fractal creature token and put X +1/+1 counters on it.
         Ability ability = new SimpleActivatedAbility(FractalToken.getEffect(
-                GetXValue.instance, "and put X +1/+1 counters on it"
+                GetXValue.instance, " and put X +1/+1 counters on it"
         ), new ManaCostsImpl<>("{X}"));
         ability.addCost(new TapSourceCost());
         this.addAbility(ability);

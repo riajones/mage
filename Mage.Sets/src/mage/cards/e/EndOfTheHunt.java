@@ -31,7 +31,7 @@ import mage.target.common.TargetOpponent;
 public final class EndOfTheHunt extends CardImpl {
 
     private static final FilterPermanent filter = new FilterCreatureOrPlaneswalkerPermanent(
-            "creature or planeswalker they control with the highest mana value " +
+            "creature or planeswalker they control with the greatest mana value " +
                     "among creatures and planeswalkers they control"
     );
 

@@ -1,18 +1,19 @@
 package mage.cards.p;
 
-import java.util.UUID;
 import mage.MageInt;
-import mage.constants.SubType;
-import mage.filter.FilterCard;
-import mage.filter.predicate.Predicates;
-import mage.filter.predicate.mageobject.VariableManaCostPredicate;
-import mage.abilities.common.AttacksTriggeredAbility;
+import mage.abilities.common.EntersBattlefieldTriggeredAbility;
 import mage.abilities.effects.common.LookLibraryAndPickControllerEffect;
 import mage.abilities.keyword.ReachAbility;
 import mage.cards.CardImpl;
 import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.PutCards;
+import mage.constants.SubType;
+import mage.filter.FilterCard;
+import mage.filter.predicate.Predicates;
+import mage.filter.predicate.mageobject.VariableManaCostPredicate;
+
+import java.util.UUID;
 
 /**
  *
@@ -43,7 +44,7 @@ public final class ParadoxSurveyor extends CardImpl {
         // When this creature enters, look at the top five cards of your library.
         // You may reveal a land card or a card with {X} in its mana cost from among them and put it into your hand.
         // Put the rest on the bottom of your library in a random order.
-        this.addAbility(new AttacksTriggeredAbility(new LookLibraryAndPickControllerEffect(
+        this.addAbility(new EntersBattlefieldTriggeredAbility(new LookLibraryAndPickControllerEffect(
             5, 1, filter,
             PutCards.HAND, PutCards.BOTTOM_RANDOM
         )));

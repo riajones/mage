@@ -31,7 +31,7 @@ public final class ColossusOfTheBloodAge extends CardImpl {
         Ability ability = new EntersBattlefieldTriggeredAbility(
             new DamagePlayersEffect(3, TargetController.OPPONENT, "it")
         );
-        ability.addEffect(new GainLifeEffect(3));
+        ability.addEffect(new GainLifeEffect(3).concatBy("and"));
         this.addAbility(ability);
 
         // When this creature dies, discard any number of cards, then draw that many cards plus one.

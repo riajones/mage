@@ -17,7 +17,7 @@ import java.util.UUID;
  */
 public final class ForcedMarch extends CardImpl {
 
-    private static final FilterCreaturePermanent filter = new FilterCreaturePermanent("creatures with converted mana cost X or less");
+    private static final FilterCreaturePermanent filter = new FilterCreaturePermanent("creatures with mana value X or less");
 
     static {
         filter.add(ForcedMarchPredicate.instance);
@@ -26,7 +26,7 @@ public final class ForcedMarch extends CardImpl {
     public ForcedMarch(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId, setInfo, new CardType[]{CardType.SORCERY}, "{X}{B}{B}{B}");
 
-        // Destroy all creatures with converted mana cost X or less
+        // Destroy all creatures with mana value X or less.
         this.getSpellAbility().addEffect(new DestroyAllEffect(filter));
     }
 

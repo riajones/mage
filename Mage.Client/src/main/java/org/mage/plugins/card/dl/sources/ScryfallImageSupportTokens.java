@@ -2928,6 +2928,19 @@ public class ScryfallImageSupportTokens {
             put("REX/Dinosaur", "https://api.scryfall.com/cards/trex/1?format=image");
             put("REX/Treasure", "https://api.scryfall.com/cards/trex/2?format=image");
 
+            // SOS
+            put("SOS/Elemental/1", "https://api.scryfall.com/cards/tsos/2?format=image");
+            put("SOS/Elemental/2", "https://api.scryfall.com/cards/tsos/3?format=image");
+            put("SOS/Fractal/1", "https://api.scryfall.com/cards/tsos/4?format=image");
+            put("SOS/Fractal/2", "https://api.scryfall.com/cards/tsos/5?format=image");
+            put("SOS/Inkling/1", "https://api.scryfall.com/cards/tsos/6?format=image");
+            put("SOS/Inkling/2", "https://api.scryfall.com/cards/tsos/7?format=image");
+            put("SOS/Pest/1", "https://api.scryfall.com/cards/tsos/8?format=image");
+            put("SOS/Pest/2", "https://api.scryfall.com/cards/tsos/9?format=image");
+            put("SOS/Spirit/1", "https://api.scryfall.com/cards/tsos/10?format=image");
+            put("SOS/Spirit/2", "https://api.scryfall.com/cards/tsos/11?format=image");
+            put("SOS/Treasure", "https://api.scryfall.com/cards/tsos/12?format=image");
+
             // SOC
             put("SOC/Beast", "https://api.scryfall.com/cards/tsoc/14?format=image");
             put("SOC/Boar", "https://api.scryfall.com/cards/tsoc/15?format=image");

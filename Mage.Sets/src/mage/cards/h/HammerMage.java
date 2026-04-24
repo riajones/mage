@@ -25,7 +25,7 @@ import java.util.UUID;
  */
 public final class HammerMage extends CardImpl {
 
-    private static final FilterArtifactPermanent filter = new FilterArtifactPermanent("artifacts with converted mana cost X or less");
+    private static final FilterArtifactPermanent filter = new FilterArtifactPermanent("artifacts with mana value X or less");
 
     static {
         filter.add(HammerMagePredicate.instance);
@@ -38,7 +38,7 @@ public final class HammerMage extends CardImpl {
         this.power = new MageInt(1);
         this.toughness = new MageInt(1);
 
-        // {X}{R}, {tap}, Discard a card: Destroy all artifacts with converted mana cost X or less.
+        // {X}{R}, {tap}, Discard a card: Destroy all artifacts with mana value X or less.
         Ability ability = new SimpleActivatedAbility(new DestroyAllEffect(filter), new ManaCostsImpl<>("{X}{R}"));
         ability.addCost(new TapSourceCost());
         ability.addCost(new DiscardCardCost());

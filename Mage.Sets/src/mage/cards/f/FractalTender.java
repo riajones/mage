@@ -44,7 +44,7 @@ public final class FractalTender extends CardImpl {
         this.toughness = new MageInt(3);
 
         // Ward {2}
-        this.addAbility(new WardAbility(new ManaCostsImpl<>("{2}")));
+        this.addAbility(new WardAbility(new ManaCostsImpl<>("{2}"), false));
 
         // Increment
         this.addAbility(new IncrementAbility());
@@ -52,7 +52,7 @@ public final class FractalTender extends CardImpl {
         // At the beginning of each end step, if you put a counter on this creature this turn, create a 0/0 green and blue Fractal creature token and put three +1/+1 counters on it.
         this.addAbility(new BeginningOfEndStepTriggeredAbility(
             TargetController.ANY,
-            FractalToken.getEffect(StaticValue.get(3), "and put three +1/+1 counters on it"),
+            FractalToken.getEffect(StaticValue.get(3), " and put three +1/+1 counters on it"),
             false,
             FractalTenderCondition.instance
         ).addHint(FractalTenderCondition.getHint()), new FractalTenderWatcher());

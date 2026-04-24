@@ -16,12 +16,15 @@ import mage.game.Game;
  */
 public class GainFlashbackTargetEffect extends ContinuousEffectImpl {
 
+    boolean textThatCard = false;
+
     public GainFlashbackTargetEffect() {
         super(Duration.EndOfTurn, Layer.AbilityAddingRemovingEffects_6, SubLayer.NA, Outcome.AddAbility);
     }
 
     protected GainFlashbackTargetEffect(final GainFlashbackTargetEffect effect) {
         super(effect);
+        this.textThatCard = effect.textThatCard;
     }
 
     @Override
@@ -43,10 +46,18 @@ public class GainFlashbackTargetEffect extends ContinuousEffectImpl {
         return true;
     }
 
+    public GainFlashbackTargetEffect withTextOptions(boolean thatCard) {
+        this.textThatCard = thatCard;
+        return this;
+    }
+
     @Override
     public String getText(Mode mode) {
-        StringBuilder sb = new StringBuilder(getTargetPointer().describeTargets(mode.getTargets(), ""));
-        sb.append(" gains flashback until end of turn. The flashback cost is equal to its mana cost");
-        return sb.toString();
+        return getTargetPointer().describeTargets(mode.getTargets(), "") +
+                " in your graveyard gains flashback until end of turn." +
+                " The flashback cost is equal to " +
+                (textThatCard ? "that card's" : "its") + " mana cost";
     }
+
+
 }

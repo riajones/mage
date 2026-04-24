@@ -56,6 +56,7 @@ public final class IceAge extends ExpansionSet {
         cards.add(new SetCardInfo("Blinking Spirit", 8, Rarity.RARE, mage.cards.b.BlinkingSpirit.class, RETRO_ART));
         cards.add(new SetCardInfo("Blizzard", 227, Rarity.RARE, mage.cards.b.Blizzard.class, RETRO_ART));
         cards.add(new SetCardInfo("Blue Scarab", 9, Rarity.UNCOMMON, mage.cards.b.BlueScarab.class, RETRO_ART));
+        cards.add(new SetCardInfo("Bone Shaman", 176, Rarity.COMMON, mage.cards.b.BoneShaman.class));
         cards.add(new SetCardInfo("Brainstorm", 61, Rarity.COMMON, mage.cards.b.Brainstorm.class, RETRO_ART));
         cards.add(new SetCardInfo("Brand of Ill Omen", 177, Rarity.RARE, mage.cards.b.BrandOfIllOmen.class, RETRO_ART));
         cards.add(new SetCardInfo("Breath of Dreams", 62, Rarity.UNCOMMON, mage.cards.b.BreathOfDreams.class, RETRO_ART));

@@ -13,10 +13,10 @@ import mage.filter.predicate.mageobject.TargetsPermanentPredicate;
  */
 public class ReparteeAbility extends SpellCastControllerTriggeredAbility {
 
-    private static final FilterSpell filter = new FilterInstantOrSorcerySpell("an instant or sorcery spell targets a creature");
+    private static final FilterSpell filter1 = new FilterInstantOrSorcerySpell("an instant or sorcery spell that targets a creature");
 
     static {
-        filter.add(new TargetsPermanentPredicate(StaticFilters.FILTER_PERMANENT_CREATURE));
+        filter1.add(new TargetsPermanentPredicate(StaticFilters.FILTER_PERMANENT_CREATURE));
     }
 
     public ReparteeAbility(Effect effect) {
@@ -24,7 +24,7 @@ public class ReparteeAbility extends SpellCastControllerTriggeredAbility {
     }
 
     public ReparteeAbility(Effect effect, boolean optional) {
-        super(effect, filter, optional);
+        super(effect, filter1, optional);
         this.setAbilityWord(AbilityWord.REPARTEE);
     }
 

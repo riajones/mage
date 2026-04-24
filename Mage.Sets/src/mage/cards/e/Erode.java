@@ -21,7 +21,7 @@ public final class Erode extends CardImpl {
         this.getSpellAbility().addEffect(new DestroyTargetEffect());
         this.getSpellAbility().addEffect(new SearchLibraryPutInPlayTargetControllerEffect(true)
                 .setText("its controller may search their library for a basic land card, " +
-                        "put that card onto the battlefield tapped, then shuffle"));
+                        "put it onto the battlefield tapped, then shuffle"));
         this.getSpellAbility().addTarget(new TargetCreatureOrPlaneswalker());
     }
 
