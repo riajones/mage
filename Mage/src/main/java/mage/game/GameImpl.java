@@ -2394,17 +2394,16 @@ public abstract class GameImpl implements Game {
             if (!player.hasLost()) {
                 String lostReason = "";
                 if (player.getLife() <= 0 && player.canLoseByZeroOrLessLife()) {
-                    lostReason = "life is 0 or less";
+                    lostReason = "to having 0 or less life";
                 }
                 if (player.getLibrary().isEmptyDraw()) {
-                    lostReason = "draw from empty library";
+                    lostReason = "drawing from an empty library";
                 }
                 if (player.getCountersCount(CounterType.POISON) >= 10) {
-                    lostReason = "poison counter >= 10";
+                    lostReason = "to having 10 or more poison counters";
                 }
-                if (!lostReason.isEmpty()) {
+                if (!lostReason.isEmpty() && player.lost(this)) {
                     this.informPlayers(player.getLogName() + " lost the game due " + lostReason);
-                    player.lost(this);
                 }
             }
         }
@@ -2496,6 +2495,15 @@ public abstract class GameImpl implements Game {
         );
         Set<Card> copiedCardsToRemove = new HashSet<>();
         for (Card copiedCard : allCopiedCards) {
+            UUID copiedCardId = copiedCard.getMainCard().getId();
+            UUID persistentCopySource = state.getPersistentCardCopySource(copiedCardId);
+            if (persistentCopySource != null) {
+                // Persistent copies opt out of 704.5e only while their registered source remains.
+                if (getPermanent(persistentCopySource) != null) {
+                    continue;
+                }
+                state.stopKeepingCardCopy(copiedCardId);
+            }
             // 1. Zone must be checked from main card only cause mdf parts can have different zones
             //    (one side on battlefield, another side on outside)
             // 2. Copied card creates in OUTSIDE zone and put to stack manually in the same code,
