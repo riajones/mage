@@ -66,6 +66,7 @@ public final class RealityFractureCommander extends ExpansionSet {
 	cards.add(new SetCardInfo("Nissa, Leyline Tamer", 2, Rarity.MYTHIC, mage.cards.n.NissaLeylineTamer.class));
         cards.add(new SetCardInfo("Niv-Mizzet, Ghost Counsel", 10, Rarity.RARE, mage.cards.n.NivMizzetGhostCounsel.class, NON_FULL_USE_VARIOUS));
         cards.add(new SetCardInfo("Niv-Mizzet, Ghost Counsel", 95, Rarity.RARE, mage.cards.n.NivMizzetGhostCounsel.class, NON_FULL_USE_VARIOUS));
+        cards.add(new SetCardInfo("Ob Nixilis, the Ascended", 5, Rarity.RARE, mage.cards.o.ObNixilisTheAscended.class));
         cards.add(new SetCardInfo("Occult Epiphany", 43, Rarity.RARE, mage.cards.o.OccultEpiphany.class));
         cards.add(new SetCardInfo("Overlord of the Mistmoors", 29, Rarity.MYTHIC, mage.cards.o.OverlordOfTheMistmoors.class));
         cards.add(new SetCardInfo("Path of Ancestry", 77, Rarity.COMMON, mage.cards.p.PathOfAncestry.class));
